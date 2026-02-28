@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
+import logging
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import IsolationForest
 from typing import Optional
 
+# Logging setup
+
+# Reusing the same logger configured in app.py
+logger = logging.getLogger(__name__)
 
 class AnomalyDetector:
-
     def __init__(self, z_threshold: float = 3.0, contamination: float = 0.05):
         self.z_threshold = z_threshold
         self.contamination = contamination  # expected fraction of anomalies
@@ -31,18 +35,21 @@ class AnomalyDetector:
         IsolationForest returns -1 for anomalies, 1 for normal points.
         Scores closer to -1 indicate stronger anomalies.
         """
-        model = IsolationForest(
-            contamination=self.contamination,
-            random_state=42,
-            n_estimators=100
-        )
-        X = df[numeric_cols].fillna(df[numeric_cols].median())
-        model.fit(X)
-
-        labels = model.predict(X)          # -1 = anomaly, 1 = normal
-        scores = model.decision_function(X)  # lower = more anomalous
-
-        return labels, scores
+        try:
+            model = IsolationForest(
+                contamination=self.contamination,
+                random_state=42,
+                n_estimators=100
+            )
+            X = df[numeric_cols].fillna(df[numeric_cols].median())
+            model.fit(X)
+            labels = model.predict(X)          # -1 = anomaly, 1 = normal
+            scores = model.decision_function(X)  # lower = more anomalous
+            logger.info(f"IsolationForest fit and scored {len(X)} rows across {len(numeric_cols)} channels")
+            return labels, scores
+        except Exception as e:
+            logger.exception("IsolationForest failed to fit or predict")
+            raise
 
     def run(
         self,
@@ -53,7 +60,7 @@ class AnomalyDetector:
     ) -> pd.DataFrame:
         result = df.copy()
 
-        # --- Z-score per channel ---
+        # Z-score per channel
         if method in ("zscore", "both"):
             for col in numeric_cols:
                 stats = baseline.get(col)
@@ -61,10 +68,12 @@ class AnomalyDetector:
                     z_scores = self.zscore_flag(df[col], stats["mean"], stats["std"])
                     result[f"{col}_zscore"] = z_scores.round(4)
                     result[f"{col}_zscore_flag"] = z_scores > self.z_threshold
+                    logger.info(f"Z-score flags computed for channel: {col}")
                 else:
                     # Not enough baseline history yet — flag as unknown
                     result[f"{col}_zscore"] = None
                     result[f"{col}_zscore_flag"] = None
+                    logger.info(f"Skipping z-score for '{col}': insufficient baseline history (count={stats['count'] if stats else 0})")
 
         # --- IsolationForest across all channels ---
         if method in ("isolation", "both"):

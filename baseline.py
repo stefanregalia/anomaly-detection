@@ -1,38 +1,53 @@
 #!/usr/bin/env python3
 import json
 import math
+import logging
 import boto3
 from datetime import datetime
 from typing import Optional
 
-s3 = boto3.client("s3")
+# Logging setup
 
+# Reuse the same logger configured in app.py
+logger = logging.getLogger(__name__)
+
+s3 = boto3.client("s3")
 
 class BaselineManager:
     """
     Maintains a per-channel running baseline using Welford's online algorithm,
     which computes mean and variance incrementally without storing all past data.
     """
-
     def __init__(self, bucket: str, baseline_key: str = "state/baseline.json"):
         self.bucket = bucket
         self.baseline_key = baseline_key
 
     def load(self) -> dict:
+        # Returns an empty baseline if the file doesn't exist yet
         try:
             response = s3.get_object(Bucket=self.bucket, Key=self.baseline_key)
-            return json.loads(response["Body"].read())
+            baseline = json.loads(response["Body"].read())
+            logger.info(f"Loaded baseline from s3://{self.bucket}/{self.baseline_key}")
+            return baseline
         except s3.exceptions.NoSuchKey:
+            logger.info("No existing baseline found, starting fresh")
+            return {}
+        except Exception as e:
+            logger.exception("Failed to load baseline from S3")
             return {}
 
     def save(self, baseline: dict):
-        baseline["last_updated"] = datetime.utcnow().isoformat()
-        s3.put_object(
-            Bucket=self.bucket,
-            Key=self.baseline_key,
-            Body=json.dumps(baseline, indent=2),
-            ContentType="application/json"
-        )
+        try:
+            baseline["last_updated"] = datetime.utcnow().isoformat()
+            s3.put_object(
+                Bucket=self.bucket,
+                Key=self.baseline_key,
+                Body=json.dumps(baseline, indent=2),
+                ContentType="application/json"
+            )
+            logger.info(f"Baseline saved to s3://{self.bucket}/{self.baseline_key}")
+        except Exception as e:
+            logger.exception("Failed to save baseline to S3")
 
     def update(self, baseline: dict, channel: str, new_values: list[float]) -> dict:
         """
@@ -58,6 +73,8 @@ class BaselineManager:
             state["std"] = math.sqrt(variance)
         else:
             state["std"] = 0.0
+
+        logger.info(f"Channel '{channel}' baseline updated: count={state['count']}, mean={round(state['mean'], 4)}, std={round(state['std'], 4)}")
 
         baseline[channel] = state
         return baseline
