@@ -16,6 +16,9 @@ Parameters:
     Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
     Default: /aws/service/canonical/ubuntu/server/24.04/stable/current/amd64/hvm/ebs-gp3/ami-id
     Description: Ubuntu 24.04 LTS AMI resolved dynamically via SSM Parameter Store
+  KeyPairName:
+    Type: AWS::EC2::KeyPair::KeyName
+    Description: EC2 key pair for SSH access
 
 Resources:
 
@@ -112,6 +115,7 @@ Resources:
       ImageId: !Ref UbuntuAmiId
       InstanceType: t3.micro
       IamInstanceProfile: !Ref AnomalyDetectionInstanceProfile
+      KeyName: !Ref KeyPairName
       SecurityGroupIds:
         - !Ref AnomalyDetectionSG
       BlockDeviceMappings:
