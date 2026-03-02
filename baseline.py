@@ -46,8 +46,18 @@ class BaselineManager:
                 ContentType="application/json"
             )
             logger.info(f"Baseline saved to s3://{self.bucket}/{self.baseline_key}")
+
+            # Sync application log to S3 whenever baseline is saved
+            log_path = "/opt/anomaly-detection/app.log"
+            s3.upload_file(
+                log_path,
+                self.bucket,
+                "logs/app.log"
+            )
+            logger.info(f"Application log synced to s3://{self.bucket}/logs/app.log")
+
         except Exception as e:
-            logger.exception("Failed to save baseline to S3")
+            logger.exception("Failed to save baseline or sync logs to S3")
 
     def update(self, baseline: dict, channel: str, new_values: list[float]) -> dict:
         """
@@ -74,7 +84,10 @@ class BaselineManager:
         else:
             state["std"] = 0.0
 
-        logger.info(f"Channel '{channel}' baseline updated: count={state['count']}, mean={round(state['mean'], 4)}, std={round(state['std'], 4)}")
+        logger.info(
+            f"Channel '{channel}' baseline updated: "
+            f"count={state['count']}, mean={round(state['mean'], 4)}, std={round(state['std'], 4)}"
+        )
 
         baseline[channel] = state
         return baseline
