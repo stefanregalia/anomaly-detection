@@ -1,0 +1,1557 @@
+2026-03-02 19:37:32,802 [INFO] Starting Anomaly Detection Pipeline, bucket: ds5220-dp1-xtm9px
+2026-03-02 19:37:32,973 [INFO] Started server process [2744]
+2026-03-02 19:37:32,974 [INFO] Waiting for application startup.
+2026-03-02 19:37:32,980 [INFO] Application startup complete.
+2026-03-02 19:37:32,984 [INFO] Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-03-02 19:42:16,571 [INFO] Received SNS message type: SubscriptionConfirmation
+2026-03-02 19:42:16,736 [INFO] SNS subscription confirmed successfully
+2026-03-02 19:56:53,397 [INFO] Received SNS message type: Notification
+2026-03-02 19:56:53,397 [INFO] Queuing background processing for: raw/sensors_20260302T195651.csv
+2026-03-02 19:56:53,398 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T195651.csv
+2026-03-02 19:56:53,493 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 19:56:53,570 [INFO] No existing baseline found, starting fresh
+2026-03-02 19:56:53,570 [INFO] Baseline loaded for 0 channels
+2026-03-02 19:56:53,576 [INFO] Channel 'temperature' baseline updated: count=100, mean=22.1897, std=1.8503
+2026-03-02 19:56:53,577 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 19:56:53,581 [INFO] Channel 'humidity' baseline updated: count=100, mean=55.0512, std=6.6118
+2026-03-02 19:56:53,581 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 19:56:53,585 [INFO] Channel 'pressure' baseline updated: count=100, mean=1012.5159, std=4.5177
+2026-03-02 19:56:53,585 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 19:56:53,589 [INFO] Channel 'wind_speed' baseline updated: count=100, mean=9.6447, std=2.45
+2026-03-02 19:56:53,589 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 19:56:53,596 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 19:56:53,598 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 19:56:53,601 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 19:56:53,603 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 19:56:53,771 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 19:56:53,776 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 19:56:53,817 [INFO] Scored file written to: processed/sensors_20260302T195651.csv
+2026-03-02 19:56:53,818 [INFO] Saving updated baseline to S3
+2026-03-02 19:56:53,853 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 19:56:53,853 [INFO] Baseline saved to S3
+2026-03-02 19:56:53,892 [INFO] Summary written to: processed/sensors_20260302T195651_summary.json
+2026-03-02 19:57:53,298 [INFO] Received SNS message type: Notification
+2026-03-02 19:57:53,298 [INFO] Queuing background processing for: raw/sensors_20260302T195752.csv
+2026-03-02 19:57:53,308 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T195752.csv
+2026-03-02 19:57:53,386 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 19:57:53,457 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 19:57:53,457 [INFO] Baseline loaded for 5 channels
+2026-03-02 19:57:53,461 [INFO] Channel 'temperature' baseline updated: count=200, mean=22.2694, std=1.8617
+2026-03-02 19:57:53,461 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 19:57:53,465 [INFO] Channel 'humidity' baseline updated: count=200, mean=55.2981, std=6.1487
+2026-03-02 19:57:53,465 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 19:57:53,469 [INFO] Channel 'pressure' baseline updated: count=200, mean=1012.9192, std=4.1006
+2026-03-02 19:57:53,469 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 19:57:53,473 [INFO] Channel 'wind_speed' baseline updated: count=200, mean=9.8686, std=2.6579
+2026-03-02 19:57:53,473 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 19:57:53,478 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 19:57:53,481 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 19:57:53,483 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 19:57:53,486 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 19:57:53,645 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 19:57:53,650 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 19:57:53,682 [INFO] Scored file written to: processed/sensors_20260302T195752.csv
+2026-03-02 19:57:53,682 [INFO] Saving updated baseline to S3
+2026-03-02 19:57:53,713 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 19:57:53,713 [INFO] Baseline saved to S3
+2026-03-02 19:57:53,744 [INFO] Summary written to: processed/sensors_20260302T195752_summary.json
+2026-03-02 19:58:53,726 [INFO] Received SNS message type: Notification
+2026-03-02 19:58:53,726 [INFO] Queuing background processing for: raw/sensors_20260302T195852.csv
+2026-03-02 19:58:53,736 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T195852.csv
+2026-03-02 19:58:53,812 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 19:58:53,890 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 19:58:53,890 [INFO] Baseline loaded for 5 channels
+2026-03-02 19:58:53,894 [INFO] Channel 'temperature' baseline updated: count=300, mean=22.2362, std=2.1551
+2026-03-02 19:58:53,894 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 19:58:53,898 [INFO] Channel 'humidity' baseline updated: count=300, mean=55.7265, std=6.3393
+2026-03-02 19:58:53,898 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 19:58:53,902 [INFO] Channel 'pressure' baseline updated: count=300, mean=1012.972, std=3.7566
+2026-03-02 19:58:53,902 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 19:58:53,906 [INFO] Channel 'wind_speed' baseline updated: count=300, mean=9.7486, std=2.6123
+2026-03-02 19:58:53,906 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 19:58:53,911 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 19:58:53,914 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 19:58:53,916 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 19:58:53,918 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 19:58:54,077 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 19:58:54,082 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 19:58:54,124 [INFO] Scored file written to: processed/sensors_20260302T195852.csv
+2026-03-02 19:58:54,124 [INFO] Saving updated baseline to S3
+2026-03-02 19:58:54,157 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 19:58:54,157 [INFO] Baseline saved to S3
+2026-03-02 19:58:54,199 [INFO] Summary written to: processed/sensors_20260302T195852_summary.json
+2026-03-02 19:59:53,611 [INFO] Received SNS message type: Notification
+2026-03-02 19:59:53,611 [INFO] Queuing background processing for: raw/sensors_20260302T195952.csv
+2026-03-02 19:59:53,613 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T195952.csv
+2026-03-02 19:59:53,687 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 19:59:53,760 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 19:59:53,760 [INFO] Baseline loaded for 5 channels
+2026-03-02 19:59:53,764 [INFO] Channel 'temperature' baseline updated: count=400, mean=22.1425, std=2.0965
+2026-03-02 19:59:53,764 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 19:59:53,768 [INFO] Channel 'humidity' baseline updated: count=400, mean=55.5288, std=6.0611
+2026-03-02 19:59:53,768 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 19:59:53,772 [INFO] Channel 'pressure' baseline updated: count=400, mean=1012.7475, std=4.1396
+2026-03-02 19:59:53,772 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 19:59:53,776 [INFO] Channel 'wind_speed' baseline updated: count=400, mean=9.7628, std=2.6953
+2026-03-02 19:59:53,776 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 19:59:53,781 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 19:59:53,784 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 19:59:53,786 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 19:59:53,789 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 19:59:53,947 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 19:59:53,952 [INFO] Detection complete: 7/100 anomalies flagged
+2026-03-02 19:59:53,986 [INFO] Scored file written to: processed/sensors_20260302T195952.csv
+2026-03-02 19:59:53,986 [INFO] Saving updated baseline to S3
+2026-03-02 19:59:54,021 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 19:59:54,021 [INFO] Baseline saved to S3
+2026-03-02 19:59:54,052 [INFO] Summary written to: processed/sensors_20260302T195952_summary.json
+2026-03-02 20:00:53,969 [INFO] Received SNS message type: Notification
+2026-03-02 20:00:53,969 [INFO] Queuing background processing for: raw/sensors_20260302T200052.csv
+2026-03-02 20:00:53,979 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T200052.csv
+2026-03-02 20:00:54,055 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:00:54,136 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:00:54,136 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:00:54,140 [INFO] Channel 'temperature' baseline updated: count=500, mean=22.0791, std=2.0007
+2026-03-02 20:00:54,140 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:00:54,144 [INFO] Channel 'humidity' baseline updated: count=500, mean=55.2655, std=6.6967
+2026-03-02 20:00:54,144 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:00:54,148 [INFO] Channel 'pressure' baseline updated: count=500, mean=1012.8013, std=3.9789
+2026-03-02 20:00:54,148 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:00:54,152 [INFO] Channel 'wind_speed' baseline updated: count=500, mean=9.7718, std=2.7335
+2026-03-02 20:00:54,152 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:00:54,157 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:00:54,159 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:00:54,162 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:00:54,164 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:00:54,322 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:00:54,327 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 20:00:54,360 [INFO] Scored file written to: processed/sensors_20260302T200052.csv
+2026-03-02 20:00:54,360 [INFO] Saving updated baseline to S3
+2026-03-02 20:00:54,394 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:00:54,394 [INFO] Baseline saved to S3
+2026-03-02 20:00:54,429 [INFO] Summary written to: processed/sensors_20260302T200052_summary.json
+2026-03-02 20:01:54,575 [INFO] Received SNS message type: Notification
+2026-03-02 20:01:54,575 [INFO] Queuing background processing for: raw/sensors_20260302T200153.csv
+2026-03-02 20:01:54,577 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T200153.csv
+2026-03-02 20:01:54,660 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:01:54,780 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:01:54,781 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:01:54,784 [INFO] Channel 'temperature' baseline updated: count=600, mean=22.0548, std=2.1653
+2026-03-02 20:01:54,784 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:01:54,788 [INFO] Channel 'humidity' baseline updated: count=600, mean=55.2237, std=6.4775
+2026-03-02 20:01:54,789 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:01:54,793 [INFO] Channel 'pressure' baseline updated: count=600, mean=1012.7234, std=3.825
+2026-03-02 20:01:54,793 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:01:54,793 [INFO] Channel 'wind_speed' baseline updated: count=600, mean=9.8351, std=2.8238
+2026-03-02 20:01:54,793 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:01:54,795 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:01:54,796 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:01:54,797 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:01:54,798 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:01:54,958 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:01:54,962 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 20:01:54,994 [INFO] Scored file written to: processed/sensors_20260302T200153.csv
+2026-03-02 20:01:54,994 [INFO] Saving updated baseline to S3
+2026-03-02 20:01:55,023 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:01:55,023 [INFO] Baseline saved to S3
+2026-03-02 20:01:55,055 [INFO] Summary written to: processed/sensors_20260302T200153_summary.json
+2026-03-02 20:02:54,338 [INFO] Received SNS message type: Notification
+2026-03-02 20:02:54,338 [INFO] Queuing background processing for: raw/sensors_20260302T200253.csv
+2026-03-02 20:02:54,340 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T200253.csv
+2026-03-02 20:02:54,417 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:02:54,493 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:02:54,493 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:02:54,497 [INFO] Channel 'temperature' baseline updated: count=700, mean=22.0186, std=2.1048
+2026-03-02 20:02:54,497 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:02:54,501 [INFO] Channel 'humidity' baseline updated: count=700, mean=55.297, std=6.3079
+2026-03-02 20:02:54,501 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:02:54,505 [INFO] Channel 'pressure' baseline updated: count=700, mean=1012.6696, std=3.9538
+2026-03-02 20:02:54,505 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:02:54,509 [INFO] Channel 'wind_speed' baseline updated: count=700, mean=9.797, std=2.7329
+2026-03-02 20:02:54,510 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:02:54,514 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:02:54,517 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:02:54,520 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:02:54,522 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:02:54,680 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:02:54,684 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 20:02:54,717 [INFO] Scored file written to: processed/sensors_20260302T200253.csv
+2026-03-02 20:02:54,718 [INFO] Saving updated baseline to S3
+2026-03-02 20:02:54,752 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:02:54,752 [INFO] Baseline saved to S3
+2026-03-02 20:02:54,793 [INFO] Summary written to: processed/sensors_20260302T200253_summary.json
+2026-03-02 20:03:55,011 [INFO] Received SNS message type: Notification
+2026-03-02 20:03:55,012 [INFO] Queuing background processing for: raw/sensors_20260302T200353.csv
+2026-03-02 20:03:55,022 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T200353.csv
+2026-03-02 20:03:55,105 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:03:55,204 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:03:55,204 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:03:55,208 [INFO] Channel 'temperature' baseline updated: count=800, mean=22.0495, std=2.0249
+2026-03-02 20:03:55,208 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:03:55,212 [INFO] Channel 'humidity' baseline updated: count=800, mean=55.1474, std=6.2354
+2026-03-02 20:03:55,212 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:03:55,216 [INFO] Channel 'pressure' baseline updated: count=800, mean=1012.7369, std=3.8491
+2026-03-02 20:03:55,216 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:03:55,220 [INFO] Channel 'wind_speed' baseline updated: count=800, mean=9.8485, std=2.8547
+2026-03-02 20:03:55,220 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:03:55,225 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:03:55,228 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:03:55,230 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:03:55,233 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:03:55,391 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:03:55,396 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 20:03:55,453 [INFO] Scored file written to: processed/sensors_20260302T200353.csv
+2026-03-02 20:03:55,453 [INFO] Saving updated baseline to S3
+2026-03-02 20:03:55,484 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:03:55,484 [INFO] Baseline saved to S3
+2026-03-02 20:03:55,560 [INFO] Summary written to: processed/sensors_20260302T200353_summary.json
+2026-03-02 20:04:55,341 [INFO] Received SNS message type: Notification
+2026-03-02 20:04:55,341 [INFO] Queuing background processing for: raw/sensors_20260302T200454.csv
+2026-03-02 20:04:55,351 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T200454.csv
+2026-03-02 20:04:55,429 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:04:55,554 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:04:55,554 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:04:55,558 [INFO] Channel 'temperature' baseline updated: count=900, mean=22.0402, std=2.0812
+2026-03-02 20:04:55,558 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:04:55,562 [INFO] Channel 'humidity' baseline updated: count=900, mean=55.076, std=6.2259
+2026-03-02 20:04:55,562 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:04:55,566 [INFO] Channel 'pressure' baseline updated: count=900, mean=1012.7235, std=3.8358
+2026-03-02 20:04:55,567 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:04:55,571 [INFO] Channel 'wind_speed' baseline updated: count=900, mean=9.8386, std=2.8308
+2026-03-02 20:04:55,571 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:04:55,576 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:04:55,578 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:04:55,581 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:04:55,584 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:04:55,741 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:04:55,745 [INFO] Detection complete: 6/100 anomalies flagged
+2026-03-02 20:04:55,779 [INFO] Scored file written to: processed/sensors_20260302T200454.csv
+2026-03-02 20:04:55,780 [INFO] Saving updated baseline to S3
+2026-03-02 20:04:55,849 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:04:55,849 [INFO] Baseline saved to S3
+2026-03-02 20:04:55,886 [INFO] Summary written to: processed/sensors_20260302T200454_summary.json
+2026-03-02 20:05:54,972 [INFO] Received SNS message type: Notification
+2026-03-02 20:05:54,972 [INFO] Queuing background processing for: raw/sensors_20260302T200554.csv
+2026-03-02 20:05:54,982 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T200554.csv
+2026-03-02 20:05:55,059 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:05:55,156 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:05:55,156 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:05:55,160 [INFO] Channel 'temperature' baseline updated: count=1000, mean=22.0478, std=2.0443
+2026-03-02 20:05:55,160 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:05:55,164 [INFO] Channel 'humidity' baseline updated: count=1000, mean=55.2359, std=6.4246
+2026-03-02 20:05:55,164 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:05:55,168 [INFO] Channel 'pressure' baseline updated: count=1000, mean=1012.8018, std=3.8073
+2026-03-02 20:05:55,169 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:05:55,173 [INFO] Channel 'wind_speed' baseline updated: count=1000, mean=9.8864, std=2.8251
+2026-03-02 20:05:55,173 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:05:55,177 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:05:55,180 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:05:55,183 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:05:55,185 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:05:55,344 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:05:55,348 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 20:05:55,382 [INFO] Scored file written to: processed/sensors_20260302T200554.csv
+2026-03-02 20:05:55,382 [INFO] Saving updated baseline to S3
+2026-03-02 20:05:55,411 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:05:55,411 [INFO] Baseline saved to S3
+2026-03-02 20:05:55,445 [INFO] Summary written to: processed/sensors_20260302T200554_summary.json
+2026-03-02 20:06:55,721 [INFO] Received SNS message type: Notification
+2026-03-02 20:06:55,721 [INFO] Queuing background processing for: raw/sensors_20260302T200654.csv
+2026-03-02 20:06:55,723 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T200654.csv
+2026-03-02 20:06:55,804 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:06:55,908 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:06:55,908 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:06:55,909 [INFO] Channel 'temperature' baseline updated: count=1100, mean=22.0497, std=2.0235
+2026-03-02 20:06:55,909 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:06:55,910 [INFO] Channel 'humidity' baseline updated: count=1100, mean=55.1714, std=6.289
+2026-03-02 20:06:55,910 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:06:55,911 [INFO] Channel 'pressure' baseline updated: count=1100, mean=1012.8131, std=3.8013
+2026-03-02 20:06:55,911 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:06:55,911 [INFO] Channel 'wind_speed' baseline updated: count=1100, mean=9.9044, std=2.9162
+2026-03-02 20:06:55,912 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:06:55,913 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:06:55,915 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:06:55,916 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:06:55,917 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:06:56,081 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:06:56,085 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 20:06:56,124 [INFO] Scored file written to: processed/sensors_20260302T200654.csv
+2026-03-02 20:06:56,124 [INFO] Saving updated baseline to S3
+2026-03-02 20:06:56,157 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:06:56,157 [INFO] Baseline saved to S3
+2026-03-02 20:06:56,204 [INFO] Summary written to: processed/sensors_20260302T200654_summary.json
+2026-03-02 20:07:56,067 [INFO] Received SNS message type: Notification
+2026-03-02 20:07:56,067 [INFO] Queuing background processing for: raw/sensors_20260302T200754.csv
+2026-03-02 20:07:56,068 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T200754.csv
+2026-03-02 20:07:56,147 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:07:56,219 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:07:56,219 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:07:56,220 [INFO] Channel 'temperature' baseline updated: count=1200, mean=22.0874, std=1.9933
+2026-03-02 20:07:56,220 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:07:56,221 [INFO] Channel 'humidity' baseline updated: count=1200, mean=55.1313, std=6.1448
+2026-03-02 20:07:56,221 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:07:56,221 [INFO] Channel 'pressure' baseline updated: count=1200, mean=1012.8673, std=4.0383
+2026-03-02 20:07:56,221 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:07:56,222 [INFO] Channel 'wind_speed' baseline updated: count=1200, mean=9.9078, std=2.8762
+2026-03-02 20:07:56,222 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:07:56,224 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:07:56,225 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:07:56,226 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:07:56,227 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:07:56,391 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:07:56,395 [INFO] Detection complete: 6/100 anomalies flagged
+2026-03-02 20:07:56,430 [INFO] Scored file written to: processed/sensors_20260302T200754.csv
+2026-03-02 20:07:56,431 [INFO] Saving updated baseline to S3
+2026-03-02 20:07:56,465 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:07:56,465 [INFO] Baseline saved to S3
+2026-03-02 20:07:56,553 [INFO] Summary written to: processed/sensors_20260302T200754_summary.json
+2026-03-02 20:08:55,611 [INFO] Received SNS message type: Notification
+2026-03-02 20:08:55,611 [INFO] Queuing background processing for: raw/sensors_20260302T200854.csv
+2026-03-02 20:08:55,617 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T200854.csv
+2026-03-02 20:08:55,691 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:08:55,803 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:08:55,803 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:08:55,807 [INFO] Channel 'temperature' baseline updated: count=1300, mean=22.0828, std=2.0154
+2026-03-02 20:08:55,807 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:08:55,811 [INFO] Channel 'humidity' baseline updated: count=1300, mean=55.1466, std=6.1173
+2026-03-02 20:08:55,811 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:08:55,812 [INFO] Channel 'pressure' baseline updated: count=1300, mean=1012.8646, std=3.9798
+2026-03-02 20:08:55,812 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:08:55,812 [INFO] Channel 'wind_speed' baseline updated: count=1300, mean=9.905, std=2.8692
+2026-03-02 20:08:55,813 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:08:55,814 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:08:55,815 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:08:55,817 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:08:55,818 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:08:55,976 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:08:55,980 [INFO] Detection complete: 6/100 anomalies flagged
+2026-03-02 20:08:56,012 [INFO] Scored file written to: processed/sensors_20260302T200854.csv
+2026-03-02 20:08:56,012 [INFO] Saving updated baseline to S3
+2026-03-02 20:08:56,055 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:08:56,055 [INFO] Baseline saved to S3
+2026-03-02 20:08:56,086 [INFO] Summary written to: processed/sensors_20260302T200854_summary.json
+2026-03-02 20:09:56,149 [INFO] Received SNS message type: Notification
+2026-03-02 20:09:56,150 [INFO] Queuing background processing for: raw/sensors_20260302T200955.csv
+2026-03-02 20:09:56,159 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T200955.csv
+2026-03-02 20:09:56,238 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:09:56,315 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:09:56,315 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:09:56,319 [INFO] Channel 'temperature' baseline updated: count=1400, mean=22.0941, std=2.0429
+2026-03-02 20:09:56,319 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:09:56,323 [INFO] Channel 'humidity' baseline updated: count=1400, mean=55.1038, std=6.1255
+2026-03-02 20:09:56,323 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:09:56,327 [INFO] Channel 'pressure' baseline updated: count=1400, mean=1012.8738, std=3.9206
+2026-03-02 20:09:56,327 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:09:56,331 [INFO] Channel 'wind_speed' baseline updated: count=1400, mean=9.9263, std=2.8439
+2026-03-02 20:09:56,331 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:09:56,336 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:09:56,339 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:09:56,341 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:09:56,344 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:09:56,505 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:09:56,510 [INFO] Detection complete: 6/100 anomalies flagged
+2026-03-02 20:09:56,546 [INFO] Scored file written to: processed/sensors_20260302T200955.csv
+2026-03-02 20:09:56,546 [INFO] Saving updated baseline to S3
+2026-03-02 20:09:56,580 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:09:56,580 [INFO] Baseline saved to S3
+2026-03-02 20:09:56,620 [INFO] Summary written to: processed/sensors_20260302T200955_summary.json
+2026-03-02 20:10:56,738 [INFO] Received SNS message type: Notification
+2026-03-02 20:10:56,738 [INFO] Queuing background processing for: raw/sensors_20260302T201055.csv
+2026-03-02 20:10:56,740 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T201055.csv
+2026-03-02 20:10:56,816 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:10:56,910 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:10:56,911 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:10:56,911 [INFO] Channel 'temperature' baseline updated: count=1500, mean=22.0964, std=2.0333
+2026-03-02 20:10:56,912 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:10:56,912 [INFO] Channel 'humidity' baseline updated: count=1500, mean=55.1485, std=6.1017
+2026-03-02 20:10:56,912 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:10:56,913 [INFO] Channel 'pressure' baseline updated: count=1500, mean=1012.8551, std=3.8972
+2026-03-02 20:10:56,913 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:10:56,914 [INFO] Channel 'wind_speed' baseline updated: count=1500, mean=9.919, std=2.8642
+2026-03-02 20:10:56,914 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:10:56,915 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:10:56,917 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:10:56,918 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:10:56,919 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:10:57,085 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:10:57,089 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 20:10:57,122 [INFO] Scored file written to: processed/sensors_20260302T201055.csv
+2026-03-02 20:10:57,122 [INFO] Saving updated baseline to S3
+2026-03-02 20:10:57,160 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:10:57,160 [INFO] Baseline saved to S3
+2026-03-02 20:10:57,195 [INFO] Summary written to: processed/sensors_20260302T201055_summary.json
+2026-03-02 20:11:57,200 [INFO] Received SNS message type: Notification
+2026-03-02 20:11:57,200 [INFO] Queuing background processing for: raw/sensors_20260302T201155.csv
+2026-03-02 20:11:57,203 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T201155.csv
+2026-03-02 20:11:57,285 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:11:57,366 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:11:57,366 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:11:57,370 [INFO] Channel 'temperature' baseline updated: count=1600, mean=22.0662, std=2.0741
+2026-03-02 20:11:57,370 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:11:57,374 [INFO] Channel 'humidity' baseline updated: count=1600, mean=55.0923, std=6.0354
+2026-03-02 20:11:57,374 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:11:57,378 [INFO] Channel 'pressure' baseline updated: count=1600, mean=1012.8333, std=3.9007
+2026-03-02 20:11:57,378 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:11:57,382 [INFO] Channel 'wind_speed' baseline updated: count=1600, mean=9.9056, std=2.879
+2026-03-02 20:11:57,382 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:11:57,387 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:11:57,390 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:11:57,393 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:11:57,395 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:11:57,554 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:11:57,559 [INFO] Detection complete: 6/100 anomalies flagged
+2026-03-02 20:11:57,601 [INFO] Scored file written to: processed/sensors_20260302T201155.csv
+2026-03-02 20:11:57,601 [INFO] Saving updated baseline to S3
+2026-03-02 20:11:57,636 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:11:57,636 [INFO] Baseline saved to S3
+2026-03-02 20:11:57,667 [INFO] Summary written to: processed/sensors_20260302T201155_summary.json
+2026-03-02 20:12:56,686 [INFO] Received SNS message type: Notification
+2026-03-02 20:12:56,686 [INFO] Queuing background processing for: raw/sensors_20260302T201256.csv
+2026-03-02 20:12:56,696 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T201256.csv
+2026-03-02 20:12:56,783 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:12:56,861 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:12:56,861 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:12:56,865 [INFO] Channel 'temperature' baseline updated: count=1700, mean=22.0657, std=2.0438
+2026-03-02 20:12:56,865 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:12:56,869 [INFO] Channel 'humidity' baseline updated: count=1700, mean=55.1195, std=5.9671
+2026-03-02 20:12:56,869 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:12:56,873 [INFO] Channel 'pressure' baseline updated: count=1700, mean=1012.8723, std=3.9149
+2026-03-02 20:12:56,873 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:12:56,877 [INFO] Channel 'wind_speed' baseline updated: count=1700, mean=9.9096, std=2.9683
+2026-03-02 20:12:56,877 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:12:56,882 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:12:56,885 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:12:56,887 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:12:56,890 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:12:57,050 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:12:57,055 [INFO] Detection complete: 7/100 anomalies flagged
+2026-03-02 20:12:57,103 [INFO] Scored file written to: processed/sensors_20260302T201256.csv
+2026-03-02 20:12:57,103 [INFO] Saving updated baseline to S3
+2026-03-02 20:12:57,138 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:12:57,139 [INFO] Baseline saved to S3
+2026-03-02 20:12:57,173 [INFO] Summary written to: processed/sensors_20260302T201256_summary.json
+2026-03-02 20:13:57,308 [INFO] Received SNS message type: Notification
+2026-03-02 20:13:57,309 [INFO] Queuing background processing for: raw/sensors_20260302T201356.csv
+2026-03-02 20:13:57,319 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T201356.csv
+2026-03-02 20:13:57,402 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:13:57,475 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:13:57,476 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:13:57,479 [INFO] Channel 'temperature' baseline updated: count=1800, mean=22.0655, std=2.0325
+2026-03-02 20:13:57,479 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:13:57,483 [INFO] Channel 'humidity' baseline updated: count=1800, mean=55.0477, std=5.9542
+2026-03-02 20:13:57,484 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:13:57,488 [INFO] Channel 'pressure' baseline updated: count=1800, mean=1012.8786, std=3.8729
+2026-03-02 20:13:57,488 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:13:57,492 [INFO] Channel 'wind_speed' baseline updated: count=1800, mean=9.8719, std=3.0436
+2026-03-02 20:13:57,492 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:13:57,497 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:13:57,500 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:13:57,502 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:13:57,505 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:13:57,662 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:13:57,666 [INFO] Detection complete: 6/100 anomalies flagged
+2026-03-02 20:13:57,702 [INFO] Scored file written to: processed/sensors_20260302T201356.csv
+2026-03-02 20:13:57,702 [INFO] Saving updated baseline to S3
+2026-03-02 20:13:57,740 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:13:57,740 [INFO] Baseline saved to S3
+2026-03-02 20:13:57,781 [INFO] Summary written to: processed/sensors_20260302T201356_summary.json
+2026-03-02 20:14:57,767 [INFO] Received SNS message type: Notification
+2026-03-02 20:14:57,767 [INFO] Queuing background processing for: raw/sensors_20260302T201456.csv
+2026-03-02 20:14:57,770 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T201456.csv
+2026-03-02 20:14:57,845 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:14:57,987 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:14:57,987 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:14:57,990 [INFO] Channel 'temperature' baseline updated: count=1900, mean=22.0459, std=2.0308
+2026-03-02 20:14:57,991 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:14:57,995 [INFO] Channel 'humidity' baseline updated: count=1900, mean=55.0939, std=5.89
+2026-03-02 20:14:57,995 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:14:57,999 [INFO] Channel 'pressure' baseline updated: count=1900, mean=1012.8897, std=3.8697
+2026-03-02 20:14:58,000 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:14:58,004 [INFO] Channel 'wind_speed' baseline updated: count=1900, mean=9.9006, std=3.0923
+2026-03-02 20:14:58,004 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:14:58,009 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:14:58,011 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:14:58,014 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:14:58,017 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:14:58,176 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:14:58,180 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 20:14:58,228 [INFO] Scored file written to: processed/sensors_20260302T201456.csv
+2026-03-02 20:14:58,228 [INFO] Saving updated baseline to S3
+2026-03-02 20:14:58,259 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:14:58,260 [INFO] Baseline saved to S3
+2026-03-02 20:14:58,310 [INFO] Summary written to: processed/sensors_20260302T201456_summary.json
+2026-03-02 20:15:57,381 [INFO] Received SNS message type: Notification
+2026-03-02 20:15:57,381 [INFO] Queuing background processing for: raw/sensors_20260302T201556.csv
+2026-03-02 20:15:57,383 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T201556.csv
+2026-03-02 20:15:57,465 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:15:57,542 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:15:57,543 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:15:57,543 [INFO] Channel 'temperature' baseline updated: count=2000, mean=22.0565, std=2.0367
+2026-03-02 20:15:57,544 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:15:57,544 [INFO] Channel 'humidity' baseline updated: count=2000, mean=55.0783, std=5.9084
+2026-03-02 20:15:57,544 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:15:57,544 [INFO] Channel 'pressure' baseline updated: count=2000, mean=1012.9365, std=3.848
+2026-03-02 20:15:57,544 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:15:57,545 [INFO] Channel 'wind_speed' baseline updated: count=2000, mean=9.8998, std=3.1005
+2026-03-02 20:15:57,545 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:15:57,547 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:15:57,548 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:15:57,549 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:15:57,550 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:15:57,712 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:15:57,716 [INFO] Detection complete: 7/100 anomalies flagged
+2026-03-02 20:15:57,749 [INFO] Scored file written to: processed/sensors_20260302T201556.csv
+2026-03-02 20:15:57,749 [INFO] Saving updated baseline to S3
+2026-03-02 20:15:57,797 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:15:57,797 [INFO] Baseline saved to S3
+2026-03-02 20:15:57,831 [INFO] Summary written to: processed/sensors_20260302T201556_summary.json
+2026-03-02 20:16:57,963 [INFO] Received SNS message type: Notification
+2026-03-02 20:16:57,963 [INFO] Queuing background processing for: raw/sensors_20260302T201656.csv
+2026-03-02 20:16:57,965 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T201656.csv
+2026-03-02 20:16:58,042 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:16:58,117 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:16:58,117 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:16:58,118 [INFO] Channel 'temperature' baseline updated: count=2100, mean=22.0544, std=2.0177
+2026-03-02 20:16:58,118 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:16:58,119 [INFO] Channel 'humidity' baseline updated: count=2100, mean=55.159, std=6.0351
+2026-03-02 20:16:58,119 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:16:58,120 [INFO] Channel 'pressure' baseline updated: count=2100, mean=1012.9455, std=3.8261
+2026-03-02 20:16:58,120 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:16:58,120 [INFO] Channel 'wind_speed' baseline updated: count=2100, mean=9.9033, std=3.072
+2026-03-02 20:16:58,121 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:16:58,122 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:16:58,124 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:16:58,125 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:16:58,126 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:16:58,291 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:16:58,294 [INFO] Detection complete: 7/100 anomalies flagged
+2026-03-02 20:16:58,327 [INFO] Scored file written to: processed/sensors_20260302T201656.csv
+2026-03-02 20:16:58,327 [INFO] Saving updated baseline to S3
+2026-03-02 20:16:58,357 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:16:58,357 [INFO] Baseline saved to S3
+2026-03-02 20:16:58,385 [INFO] Summary written to: processed/sensors_20260302T201656_summary.json
+2026-03-02 20:17:58,366 [INFO] Received SNS message type: Notification
+2026-03-02 20:17:58,367 [INFO] Queuing background processing for: raw/sensors_20260302T201757.csv
+2026-03-02 20:17:58,377 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T201757.csv
+2026-03-02 20:17:58,452 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:17:58,526 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:17:58,526 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:17:58,530 [INFO] Channel 'temperature' baseline updated: count=2200, mean=22.0468, std=1.9995
+2026-03-02 20:17:58,530 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:17:58,534 [INFO] Channel 'humidity' baseline updated: count=2200, mean=55.131, std=6.0948
+2026-03-02 20:17:58,535 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:17:58,539 [INFO] Channel 'pressure' baseline updated: count=2200, mean=1012.9294, std=3.865
+2026-03-02 20:17:58,539 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:17:58,543 [INFO] Channel 'wind_speed' baseline updated: count=2200, mean=9.9109, std=3.0667
+2026-03-02 20:17:58,543 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:17:58,548 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:17:58,550 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:17:58,553 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:17:58,555 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:17:58,712 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:17:58,717 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 20:17:58,753 [INFO] Scored file written to: processed/sensors_20260302T201757.csv
+2026-03-02 20:17:58,753 [INFO] Saving updated baseline to S3
+2026-03-02 20:17:58,786 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:17:58,786 [INFO] Baseline saved to S3
+2026-03-02 20:17:58,814 [INFO] Summary written to: processed/sensors_20260302T201757_summary.json
+2026-03-02 20:18:59,055 [INFO] Received SNS message type: Notification
+2026-03-02 20:18:59,056 [INFO] Queuing background processing for: raw/sensors_20260302T201857.csv
+2026-03-02 20:18:59,057 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T201857.csv
+2026-03-02 20:18:59,135 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:18:59,218 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:18:59,218 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:18:59,219 [INFO] Channel 'temperature' baseline updated: count=2300, mean=22.0421, std=2.0073
+2026-03-02 20:18:59,220 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:18:59,220 [INFO] Channel 'humidity' baseline updated: count=2300, mean=55.1394, std=6.0868
+2026-03-02 20:18:59,220 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:18:59,221 [INFO] Channel 'pressure' baseline updated: count=2300, mean=1012.9268, std=3.825
+2026-03-02 20:18:59,221 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:18:59,222 [INFO] Channel 'wind_speed' baseline updated: count=2300, mean=9.9099, std=3.0977
+2026-03-02 20:18:59,222 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:18:59,223 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:18:59,225 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:18:59,226 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:18:59,227 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:18:59,389 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:18:59,393 [INFO] Detection complete: 6/100 anomalies flagged
+2026-03-02 20:18:59,422 [INFO] Scored file written to: processed/sensors_20260302T201857.csv
+2026-03-02 20:18:59,422 [INFO] Saving updated baseline to S3
+2026-03-02 20:18:59,454 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:18:59,454 [INFO] Baseline saved to S3
+2026-03-02 20:18:59,482 [INFO] Summary written to: processed/sensors_20260302T201857_summary.json
+2026-03-02 20:19:59,517 [INFO] Received SNS message type: Notification
+2026-03-02 20:19:59,517 [INFO] Queuing background processing for: raw/sensors_20260302T201958.csv
+2026-03-02 20:19:59,519 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T201958.csv
+2026-03-02 20:19:59,595 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:19:59,667 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:19:59,667 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:19:59,668 [INFO] Channel 'temperature' baseline updated: count=2400, mean=22.0194, std=2.0192
+2026-03-02 20:19:59,669 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:19:59,669 [INFO] Channel 'humidity' baseline updated: count=2400, mean=55.1571, std=6.0591
+2026-03-02 20:19:59,669 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:19:59,670 [INFO] Channel 'pressure' baseline updated: count=2400, mean=1012.9379, std=3.8229
+2026-03-02 20:19:59,670 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:19:59,670 [INFO] Channel 'wind_speed' baseline updated: count=2400, mean=9.8864, std=3.1182
+2026-03-02 20:19:59,671 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:19:59,672 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:19:59,673 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:19:59,675 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:19:59,676 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:19:59,837 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:19:59,841 [INFO] Detection complete: 6/100 anomalies flagged
+2026-03-02 20:19:59,873 [INFO] Scored file written to: processed/sensors_20260302T201958.csv
+2026-03-02 20:19:59,873 [INFO] Saving updated baseline to S3
+2026-03-02 20:19:59,903 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:19:59,904 [INFO] Baseline saved to S3
+2026-03-02 20:19:59,946 [INFO] Summary written to: processed/sensors_20260302T201958_summary.json
+2026-03-02 20:20:59,830 [INFO] Received SNS message type: Notification
+2026-03-02 20:20:59,831 [INFO] Queuing background processing for: raw/sensors_20260302T202058.csv
+2026-03-02 20:20:59,832 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T202058.csv
+2026-03-02 20:20:59,906 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:20:59,986 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:20:59,986 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:20:59,987 [INFO] Channel 'temperature' baseline updated: count=2500, mean=22.0125, std=2.0223
+2026-03-02 20:20:59,987 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:20:59,988 [INFO] Channel 'humidity' baseline updated: count=2500, mean=55.197, std=6.0659
+2026-03-02 20:20:59,988 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:20:59,988 [INFO] Channel 'pressure' baseline updated: count=2500, mean=1012.9498, std=3.7931
+2026-03-02 20:20:59,988 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:20:59,989 [INFO] Channel 'wind_speed' baseline updated: count=2500, mean=9.9065, std=3.1525
+2026-03-02 20:20:59,989 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:20:59,991 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:20:59,992 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:20:59,993 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:20:59,994 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:21:00,264 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:21:00,268 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 20:21:00,310 [INFO] Scored file written to: processed/sensors_20260302T202058.csv
+2026-03-02 20:21:00,311 [INFO] Saving updated baseline to S3
+2026-03-02 20:21:00,347 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:21:00,347 [INFO] Baseline saved to S3
+2026-03-02 20:21:00,376 [INFO] Summary written to: processed/sensors_20260302T202058_summary.json
+2026-03-02 20:22:00,174 [INFO] Received SNS message type: Notification
+2026-03-02 20:22:00,174 [INFO] Queuing background processing for: raw/sensors_20260302T202158.csv
+2026-03-02 20:22:00,178 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T202158.csv
+2026-03-02 20:22:00,269 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:22:00,411 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:22:00,411 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:22:00,412 [INFO] Channel 'temperature' baseline updated: count=2600, mean=22.0, std=2.012
+2026-03-02 20:22:00,412 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:22:00,413 [INFO] Channel 'humidity' baseline updated: count=2600, mean=55.2083, std=6.0667
+2026-03-02 20:22:00,413 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:22:00,413 [INFO] Channel 'pressure' baseline updated: count=2600, mean=1012.9233, std=3.8041
+2026-03-02 20:22:00,413 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:22:00,413 [INFO] Channel 'wind_speed' baseline updated: count=2600, mean=9.926, std=3.1355
+2026-03-02 20:22:00,414 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:22:00,415 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:22:00,416 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:22:00,417 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:22:00,418 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:22:00,584 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:22:00,588 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 20:22:00,644 [INFO] Scored file written to: processed/sensors_20260302T202158.csv
+2026-03-02 20:22:00,645 [INFO] Saving updated baseline to S3
+2026-03-02 20:22:00,682 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:22:00,682 [INFO] Baseline saved to S3
+2026-03-02 20:22:00,740 [INFO] Summary written to: processed/sensors_20260302T202158_summary.json
+2026-03-02 20:23:00,137 [INFO] Received SNS message type: Notification
+2026-03-02 20:23:00,137 [INFO] Queuing background processing for: raw/sensors_20260302T202259.csv
+2026-03-02 20:23:00,150 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T202259.csv
+2026-03-02 20:23:00,238 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:23:00,315 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:23:00,315 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:23:00,319 [INFO] Channel 'temperature' baseline updated: count=2700, mean=22.0025, std=2.0017
+2026-03-02 20:23:00,320 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:23:00,324 [INFO] Channel 'humidity' baseline updated: count=2700, mean=55.2172, std=6.0883
+2026-03-02 20:23:00,324 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:23:00,328 [INFO] Channel 'pressure' baseline updated: count=2700, mean=1012.905, std=3.8708
+2026-03-02 20:23:00,328 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:23:00,332 [INFO] Channel 'wind_speed' baseline updated: count=2700, mean=9.9124, std=3.1425
+2026-03-02 20:23:00,333 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:23:00,337 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:23:00,340 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:23:00,343 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:23:00,345 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:23:00,502 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:23:00,507 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 20:23:00,543 [INFO] Scored file written to: processed/sensors_20260302T202259.csv
+2026-03-02 20:23:00,543 [INFO] Saving updated baseline to S3
+2026-03-02 20:23:00,575 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:23:00,575 [INFO] Baseline saved to S3
+2026-03-02 20:23:00,608 [INFO] Summary written to: processed/sensors_20260302T202259_summary.json
+2026-03-02 20:24:00,489 [INFO] Received SNS message type: Notification
+2026-03-02 20:24:00,489 [INFO] Queuing background processing for: raw/sensors_20260302T202359.csv
+2026-03-02 20:24:00,491 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T202359.csv
+2026-03-02 20:24:00,569 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:24:00,662 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:24:00,663 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:24:00,663 [INFO] Channel 'temperature' baseline updated: count=2800, mean=22.0029, std=1.9905
+2026-03-02 20:24:00,663 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:24:00,664 [INFO] Channel 'humidity' baseline updated: count=2800, mean=55.2002, std=6.0879
+2026-03-02 20:24:00,664 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:24:00,664 [INFO] Channel 'pressure' baseline updated: count=2800, mean=1012.8813, std=3.867
+2026-03-02 20:24:00,664 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:24:00,665 [INFO] Channel 'wind_speed' baseline updated: count=2800, mean=9.8996, std=3.1586
+2026-03-02 20:24:00,665 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:24:00,666 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:24:00,668 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:24:00,669 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:24:00,670 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:24:00,832 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:24:00,836 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 20:24:00,873 [INFO] Scored file written to: processed/sensors_20260302T202359.csv
+2026-03-02 20:24:00,873 [INFO] Saving updated baseline to S3
+2026-03-02 20:24:00,907 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:24:00,908 [INFO] Baseline saved to S3
+2026-03-02 20:24:00,936 [INFO] Summary written to: processed/sensors_20260302T202359_summary.json
+2026-03-02 20:25:00,961 [INFO] Received SNS message type: Notification
+2026-03-02 20:25:00,962 [INFO] Queuing background processing for: raw/sensors_20260302T202459.csv
+2026-03-02 20:25:00,964 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T202459.csv
+2026-03-02 20:25:01,057 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:25:01,132 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:25:01,133 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:25:01,133 [INFO] Channel 'temperature' baseline updated: count=2900, mean=21.9987, std=1.9863
+2026-03-02 20:25:01,134 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:25:01,134 [INFO] Channel 'humidity' baseline updated: count=2900, mean=55.1933, std=6.0625
+2026-03-02 20:25:01,135 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:25:01,135 [INFO] Channel 'pressure' baseline updated: count=2900, mean=1012.9201, std=3.9564
+2026-03-02 20:25:01,135 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:25:01,135 [INFO] Channel 'wind_speed' baseline updated: count=2900, mean=9.8936, std=3.1421
+2026-03-02 20:25:01,136 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:25:01,138 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:25:01,139 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:25:01,141 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:25:01,154 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:25:01,688 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:25:01,698 [INFO] Detection complete: 6/100 anomalies flagged
+2026-03-02 20:25:01,759 [INFO] Scored file written to: processed/sensors_20260302T202459.csv
+2026-03-02 20:25:01,759 [INFO] Saving updated baseline to S3
+2026-03-02 20:25:01,794 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:25:01,794 [INFO] Baseline saved to S3
+2026-03-02 20:25:01,846 [INFO] Summary written to: processed/sensors_20260302T202459_summary.json
+2026-03-02 20:26:01,418 [INFO] Received SNS message type: Notification
+2026-03-02 20:26:01,419 [INFO] Queuing background processing for: raw/sensors_20260302T202600.csv
+2026-03-02 20:26:01,428 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T202600.csv
+2026-03-02 20:26:01,653 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:26:01,931 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:26:01,932 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:26:01,952 [INFO] Channel 'temperature' baseline updated: count=3000, mean=21.9977, std=1.9826
+2026-03-02 20:26:01,954 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:26:01,994 [INFO] Channel 'humidity' baseline updated: count=3000, mean=55.1404, std=6.0885
+2026-03-02 20:26:01,996 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:26:01,997 [INFO] Channel 'pressure' baseline updated: count=3000, mean=1012.9105, std=3.9423
+2026-03-02 20:26:01,997 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:26:02,056 [INFO] Channel 'wind_speed' baseline updated: count=3000, mean=9.9161, std=3.1984
+2026-03-02 20:26:02,056 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:26:02,078 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:26:02,087 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:26:02,098 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:26:02,102 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:26:02,390 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:26:02,406 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 20:26:02,476 [INFO] Scored file written to: processed/sensors_20260302T202600.csv
+2026-03-02 20:26:02,476 [INFO] Saving updated baseline to S3
+2026-03-02 20:26:02,517 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:26:02,517 [INFO] Baseline saved to S3
+2026-03-02 20:26:02,557 [INFO] Summary written to: processed/sensors_20260302T202600_summary.json
+2026-03-02 20:27:01,022 [INFO] Received SNS message type: Notification
+2026-03-02 20:27:01,023 [INFO] Queuing background processing for: raw/sensors_20260302T202700.csv
+2026-03-02 20:27:01,024 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T202700.csv
+2026-03-02 20:27:01,099 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:27:01,217 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:27:01,217 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:27:01,219 [INFO] Channel 'temperature' baseline updated: count=3100, mean=21.9929, std=1.9719
+2026-03-02 20:27:01,220 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:27:01,221 [INFO] Channel 'humidity' baseline updated: count=3100, mean=55.153, std=6.0466
+2026-03-02 20:27:01,221 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:27:01,228 [INFO] Channel 'pressure' baseline updated: count=3100, mean=1012.9026, std=4.0176
+2026-03-02 20:27:01,229 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:27:01,230 [INFO] Channel 'wind_speed' baseline updated: count=3100, mean=9.9156, std=3.194
+2026-03-02 20:27:01,234 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:27:01,236 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:27:01,237 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:27:01,244 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:27:01,246 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:27:01,639 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:27:01,649 [INFO] Detection complete: 7/100 anomalies flagged
+2026-03-02 20:27:01,682 [INFO] Scored file written to: processed/sensors_20260302T202700.csv
+2026-03-02 20:27:01,683 [INFO] Saving updated baseline to S3
+2026-03-02 20:27:01,715 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:27:01,715 [INFO] Baseline saved to S3
+2026-03-02 20:27:01,745 [INFO] Summary written to: processed/sensors_20260302T202700_summary.json
+2026-03-02 20:28:01,680 [INFO] Received SNS message type: Notification
+2026-03-02 20:28:01,680 [INFO] Queuing background processing for: raw/sensors_20260302T202800.csv
+2026-03-02 20:28:01,695 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T202800.csv
+2026-03-02 20:28:02,051 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:28:02,207 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:28:02,208 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:28:02,210 [INFO] Channel 'temperature' baseline updated: count=3200, mean=21.9879, std=1.9598
+2026-03-02 20:28:02,210 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:28:02,211 [INFO] Channel 'humidity' baseline updated: count=3200, mean=55.1342, std=6.0505
+2026-03-02 20:28:02,211 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:28:02,211 [INFO] Channel 'pressure' baseline updated: count=3200, mean=1012.9156, std=4.0414
+2026-03-02 20:28:02,211 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:28:02,212 [INFO] Channel 'wind_speed' baseline updated: count=3200, mean=9.9355, std=3.1755
+2026-03-02 20:28:02,228 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:28:02,230 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:28:02,231 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:28:02,254 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:28:02,272 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:28:02,670 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:28:02,674 [INFO] Detection complete: 6/100 anomalies flagged
+2026-03-02 20:28:02,739 [INFO] Scored file written to: processed/sensors_20260302T202800.csv
+2026-03-02 20:28:02,739 [INFO] Saving updated baseline to S3
+2026-03-02 20:28:02,773 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:28:02,774 [INFO] Baseline saved to S3
+2026-03-02 20:28:02,811 [INFO] Summary written to: processed/sensors_20260302T202800_summary.json
+2026-03-02 20:29:01,991 [INFO] Received SNS message type: Notification
+2026-03-02 20:29:01,992 [INFO] Queuing background processing for: raw/sensors_20260302T202900.csv
+2026-03-02 20:29:02,001 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T202900.csv
+2026-03-02 20:29:02,193 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:29:02,278 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:29:02,278 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:29:02,283 [INFO] Channel 'temperature' baseline updated: count=3300, mean=21.9756, std=1.9527
+2026-03-02 20:29:02,283 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:29:02,284 [INFO] Channel 'humidity' baseline updated: count=3300, mean=55.1447, std=6.0368
+2026-03-02 20:29:02,284 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:29:02,293 [INFO] Channel 'pressure' baseline updated: count=3300, mean=1012.9431, std=4.0752
+2026-03-02 20:29:02,294 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:29:02,298 [INFO] Channel 'wind_speed' baseline updated: count=3300, mean=9.9281, std=3.1834
+2026-03-02 20:29:02,298 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:29:02,314 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:29:02,320 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:29:02,324 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:29:02,327 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:29:02,495 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:29:02,500 [INFO] Detection complete: 6/100 anomalies flagged
+2026-03-02 20:29:02,548 [INFO] Scored file written to: processed/sensors_20260302T202900.csv
+2026-03-02 20:29:02,548 [INFO] Saving updated baseline to S3
+2026-03-02 20:29:02,581 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:29:02,581 [INFO] Baseline saved to S3
+2026-03-02 20:29:02,614 [INFO] Summary written to: processed/sensors_20260302T202900_summary.json
+2026-03-02 20:30:01,626 [INFO] Received SNS message type: Notification
+2026-03-02 20:30:01,626 [INFO] Queuing background processing for: raw/sensors_20260302T203000.csv
+2026-03-02 20:30:01,627 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T203000.csv
+2026-03-02 20:30:02,081 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:30:02,330 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:30:02,330 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:30:02,331 [INFO] Channel 'temperature' baseline updated: count=3400, mean=21.9757, std=1.9584
+2026-03-02 20:30:02,331 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:30:02,331 [INFO] Channel 'humidity' baseline updated: count=3400, mean=55.1125, std=6.0371
+2026-03-02 20:30:02,331 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:30:02,331 [INFO] Channel 'pressure' baseline updated: count=3400, mean=1012.9542, std=4.0351
+2026-03-02 20:30:02,332 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:30:02,332 [INFO] Channel 'wind_speed' baseline updated: count=3400, mean=9.9197, std=3.1914
+2026-03-02 20:30:02,332 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:30:02,334 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:30:02,444 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:30:02,450 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:30:02,452 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:30:03,254 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:30:03,282 [INFO] Detection complete: 6/100 anomalies flagged
+2026-03-02 20:30:03,337 [INFO] Scored file written to: processed/sensors_20260302T203000.csv
+2026-03-02 20:30:03,337 [INFO] Saving updated baseline to S3
+2026-03-02 20:30:03,378 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:30:03,379 [INFO] Baseline saved to S3
+2026-03-02 20:30:03,421 [INFO] Summary written to: processed/sensors_20260302T203000_summary.json
+2026-03-02 20:31:02,067 [INFO] Received SNS message type: Notification
+2026-03-02 20:31:02,068 [INFO] Queuing background processing for: raw/sensors_20260302T203101.csv
+2026-03-02 20:31:02,073 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T203101.csv
+2026-03-02 20:31:02,183 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:31:02,269 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:31:02,269 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:31:02,273 [INFO] Channel 'temperature' baseline updated: count=3500, mean=21.9664, std=1.9985
+2026-03-02 20:31:02,273 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:31:02,278 [INFO] Channel 'humidity' baseline updated: count=3500, mean=55.1281, std=6.0039
+2026-03-02 20:31:02,278 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:31:02,282 [INFO] Channel 'pressure' baseline updated: count=3500, mean=1012.9417, std=4.0338
+2026-03-02 20:31:02,283 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:31:02,287 [INFO] Channel 'wind_speed' baseline updated: count=3500, mean=9.9227, std=3.1727
+2026-03-02 20:31:02,287 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:31:02,292 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:31:02,296 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:31:02,298 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:31:02,301 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:31:02,460 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:31:02,464 [INFO] Detection complete: 6/100 anomalies flagged
+2026-03-02 20:31:02,496 [INFO] Scored file written to: processed/sensors_20260302T203101.csv
+2026-03-02 20:31:02,496 [INFO] Saving updated baseline to S3
+2026-03-02 20:31:02,526 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:31:02,526 [INFO] Baseline saved to S3
+2026-03-02 20:31:02,554 [INFO] Summary written to: processed/sensors_20260302T203101_summary.json
+2026-03-02 20:32:02,650 [INFO] Received SNS message type: Notification
+2026-03-02 20:32:02,650 [INFO] Queuing background processing for: raw/sensors_20260302T203201.csv
+2026-03-02 20:32:02,653 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T203201.csv
+2026-03-02 20:32:02,745 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:32:02,827 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:32:02,828 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:32:02,831 [INFO] Channel 'temperature' baseline updated: count=3600, mean=21.9726, std=1.9956
+2026-03-02 20:32:02,831 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:32:02,835 [INFO] Channel 'humidity' baseline updated: count=3600, mean=55.1338, std=5.9878
+2026-03-02 20:32:02,835 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:32:02,840 [INFO] Channel 'pressure' baseline updated: count=3600, mean=1012.9434, std=4.0186
+2026-03-02 20:32:02,840 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:32:02,840 [INFO] Channel 'wind_speed' baseline updated: count=3600, mean=9.939, std=3.1778
+2026-03-02 20:32:02,840 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:32:02,842 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:32:02,843 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:32:02,844 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:32:02,846 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:32:03,004 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:32:03,007 [INFO] Detection complete: 7/100 anomalies flagged
+2026-03-02 20:32:03,052 [INFO] Scored file written to: processed/sensors_20260302T203201.csv
+2026-03-02 20:32:03,052 [INFO] Saving updated baseline to S3
+2026-03-02 20:32:03,087 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:32:03,088 [INFO] Baseline saved to S3
+2026-03-02 20:32:03,126 [INFO] Summary written to: processed/sensors_20260302T203201_summary.json
+2026-03-02 20:33:02,180 [INFO] Received SNS message type: Notification
+2026-03-02 20:33:02,180 [INFO] Queuing background processing for: raw/sensors_20260302T203301.csv
+2026-03-02 20:33:02,182 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T203301.csv
+2026-03-02 20:33:02,276 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:33:02,405 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:33:02,405 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:33:02,406 [INFO] Channel 'temperature' baseline updated: count=3700, mean=21.9737, std=1.9928
+2026-03-02 20:33:02,406 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:33:02,407 [INFO] Channel 'humidity' baseline updated: count=3700, mean=55.1105, std=5.9985
+2026-03-02 20:33:02,407 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:33:02,408 [INFO] Channel 'pressure' baseline updated: count=3700, mean=1012.9392, std=4.005
+2026-03-02 20:33:02,408 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:33:02,408 [INFO] Channel 'wind_speed' baseline updated: count=3700, mean=9.9363, std=3.1787
+2026-03-02 20:33:02,409 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:33:02,410 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:33:02,411 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:33:02,413 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:33:02,414 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:33:02,576 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:33:02,579 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 20:33:02,627 [INFO] Scored file written to: processed/sensors_20260302T203301.csv
+2026-03-02 20:33:02,627 [INFO] Saving updated baseline to S3
+2026-03-02 20:33:02,669 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:33:02,670 [INFO] Baseline saved to S3
+2026-03-02 20:33:02,703 [INFO] Summary written to: processed/sensors_20260302T203301_summary.json
+2026-03-02 20:34:02,732 [INFO] Received SNS message type: Notification
+2026-03-02 20:34:02,733 [INFO] Queuing background processing for: raw/sensors_20260302T203401.csv
+2026-03-02 20:34:02,734 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T203401.csv
+2026-03-02 20:34:02,818 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:34:02,902 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:34:02,902 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:34:02,903 [INFO] Channel 'temperature' baseline updated: count=3800, mean=21.9779, std=1.9884
+2026-03-02 20:34:02,903 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:34:02,903 [INFO] Channel 'humidity' baseline updated: count=3800, mean=55.1197, std=6.0669
+2026-03-02 20:34:02,904 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:34:02,904 [INFO] Channel 'pressure' baseline updated: count=3800, mean=1012.956, std=3.9878
+2026-03-02 20:34:02,904 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:34:02,905 [INFO] Channel 'wind_speed' baseline updated: count=3800, mean=9.9328, std=3.1627
+2026-03-02 20:34:02,905 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:34:02,907 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:34:02,908 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:34:02,909 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:34:02,911 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:34:03,072 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:34:03,075 [INFO] Detection complete: 6/100 anomalies flagged
+2026-03-02 20:34:03,111 [INFO] Scored file written to: processed/sensors_20260302T203401.csv
+2026-03-02 20:34:03,112 [INFO] Saving updated baseline to S3
+2026-03-02 20:34:03,144 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:34:03,144 [INFO] Baseline saved to S3
+2026-03-02 20:34:03,172 [INFO] Summary written to: processed/sensors_20260302T203401_summary.json
+2026-03-02 20:35:03,108 [INFO] Received SNS message type: Notification
+2026-03-02 20:35:03,108 [INFO] Queuing background processing for: raw/sensors_20260302T203501.csv
+2026-03-02 20:35:03,119 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T203501.csv
+2026-03-02 20:35:03,205 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:35:03,315 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:35:03,315 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:35:03,319 [INFO] Channel 'temperature' baseline updated: count=3900, mean=21.9838, std=1.9877
+2026-03-02 20:35:03,319 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:35:03,324 [INFO] Channel 'humidity' baseline updated: count=3900, mean=55.0953, std=6.0441
+2026-03-02 20:35:03,324 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:35:03,329 [INFO] Channel 'pressure' baseline updated: count=3900, mean=1012.9666, std=4.0147
+2026-03-02 20:35:03,329 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:35:03,334 [INFO] Channel 'wind_speed' baseline updated: count=3900, mean=9.9383, std=3.1657
+2026-03-02 20:35:03,334 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:35:03,339 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:35:03,342 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:35:03,344 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:35:03,347 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:35:03,525 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:35:03,530 [INFO] Detection complete: 7/100 anomalies flagged
+2026-03-02 20:35:03,564 [INFO] Scored file written to: processed/sensors_20260302T203501.csv
+2026-03-02 20:35:03,564 [INFO] Saving updated baseline to S3
+2026-03-02 20:35:03,596 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:35:03,597 [INFO] Baseline saved to S3
+2026-03-02 20:35:03,635 [INFO] Summary written to: processed/sensors_20260302T203501_summary.json
+2026-03-02 20:36:02,989 [INFO] Received SNS message type: Notification
+2026-03-02 20:36:02,989 [INFO] Queuing background processing for: raw/sensors_20260302T203601.csv
+2026-03-02 20:36:03,000 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T203601.csv
+2026-03-02 20:36:03,076 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:36:03,203 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:36:03,203 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:36:03,207 [INFO] Channel 'temperature' baseline updated: count=4000, mean=21.9941, std=2.0115
+2026-03-02 20:36:03,207 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:36:03,211 [INFO] Channel 'humidity' baseline updated: count=4000, mean=55.0882, std=6.0176
+2026-03-02 20:36:03,211 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:36:03,215 [INFO] Channel 'pressure' baseline updated: count=4000, mean=1012.9749, std=3.9892
+2026-03-02 20:36:03,216 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:36:03,220 [INFO] Channel 'wind_speed' baseline updated: count=4000, mean=9.9307, std=3.1777
+2026-03-02 20:36:03,220 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:36:03,225 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:36:03,228 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:36:03,230 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:36:03,233 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:36:03,394 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:36:03,398 [INFO] Detection complete: 6/100 anomalies flagged
+2026-03-02 20:36:03,436 [INFO] Scored file written to: processed/sensors_20260302T203601.csv
+2026-03-02 20:36:03,436 [INFO] Saving updated baseline to S3
+2026-03-02 20:36:03,470 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:36:03,471 [INFO] Baseline saved to S3
+2026-03-02 20:36:03,500 [INFO] Summary written to: processed/sensors_20260302T203601_summary.json
+2026-03-02 20:37:03,330 [INFO] Received SNS message type: Notification
+2026-03-02 20:37:03,330 [INFO] Queuing background processing for: raw/sensors_20260302T203702.csv
+2026-03-02 20:37:03,333 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T203702.csv
+2026-03-02 20:37:03,423 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:37:03,505 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:37:03,505 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:37:03,509 [INFO] Channel 'temperature' baseline updated: count=4100, mean=21.9953, std=2.015
+2026-03-02 20:37:03,509 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:37:03,513 [INFO] Channel 'humidity' baseline updated: count=4100, mean=55.087, std=5.9951
+2026-03-02 20:37:03,513 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:37:03,517 [INFO] Channel 'pressure' baseline updated: count=4100, mean=1012.9648, std=3.9837
+2026-03-02 20:37:03,517 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:37:03,522 [INFO] Channel 'wind_speed' baseline updated: count=4100, mean=9.9479, std=3.1822
+2026-03-02 20:37:03,522 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:37:03,527 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:37:03,529 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:37:03,532 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:37:03,534 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:37:03,693 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:37:03,698 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 20:37:03,733 [INFO] Scored file written to: processed/sensors_20260302T203702.csv
+2026-03-02 20:37:03,734 [INFO] Saving updated baseline to S3
+2026-03-02 20:37:03,781 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:37:03,781 [INFO] Baseline saved to S3
+2026-03-02 20:37:03,818 [INFO] Summary written to: processed/sensors_20260302T203702_summary.json
+2026-03-02 20:38:03,020 [INFO] Received SNS message type: Notification
+2026-03-02 20:38:03,020 [INFO] Queuing background processing for: raw/sensors_20260302T203802.csv
+2026-03-02 20:38:03,040 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T203802.csv
+2026-03-02 20:38:03,124 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:38:03,219 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:38:03,219 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:38:03,223 [INFO] Channel 'temperature' baseline updated: count=4200, mean=21.9951, std=2.0148
+2026-03-02 20:38:03,223 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:38:03,227 [INFO] Channel 'humidity' baseline updated: count=4200, mean=55.1068, std=6.0009
+2026-03-02 20:38:03,227 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:38:03,231 [INFO] Channel 'pressure' baseline updated: count=4200, mean=1012.9648, std=3.9673
+2026-03-02 20:38:03,231 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:38:03,232 [INFO] Channel 'wind_speed' baseline updated: count=4200, mean=9.954, std=3.1865
+2026-03-02 20:38:03,232 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:38:03,234 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:38:03,235 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:38:03,237 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:38:03,238 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:38:03,404 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:38:03,408 [INFO] Detection complete: 6/100 anomalies flagged
+2026-03-02 20:38:03,446 [INFO] Scored file written to: processed/sensors_20260302T203802.csv
+2026-03-02 20:38:03,446 [INFO] Saving updated baseline to S3
+2026-03-02 20:38:03,482 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:38:03,485 [INFO] Baseline saved to S3
+2026-03-02 20:38:03,525 [INFO] Summary written to: processed/sensors_20260302T203802_summary.json
+2026-03-02 20:39:03,767 [INFO] Received SNS message type: Notification
+2026-03-02 20:39:03,768 [INFO] Queuing background processing for: raw/sensors_20260302T203902.csv
+2026-03-02 20:39:03,778 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T203902.csv
+2026-03-02 20:39:03,853 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:39:03,948 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:39:03,948 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:39:03,949 [INFO] Channel 'temperature' baseline updated: count=4300, mean=21.9946, std=2.0302
+2026-03-02 20:39:03,949 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:39:03,949 [INFO] Channel 'humidity' baseline updated: count=4300, mean=55.1197, std=5.9867
+2026-03-02 20:39:03,949 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:39:03,950 [INFO] Channel 'pressure' baseline updated: count=4300, mean=1012.9557, std=3.9504
+2026-03-02 20:39:03,950 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:39:03,950 [INFO] Channel 'wind_speed' baseline updated: count=4300, mean=9.9525, std=3.1914
+2026-03-02 20:39:03,950 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:39:03,952 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:39:03,953 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:39:03,954 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:39:03,955 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:39:04,118 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:39:04,121 [INFO] Detection complete: 6/100 anomalies flagged
+2026-03-02 20:39:04,152 [INFO] Scored file written to: processed/sensors_20260302T203902.csv
+2026-03-02 20:39:04,152 [INFO] Saving updated baseline to S3
+2026-03-02 20:39:04,183 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:39:04,183 [INFO] Baseline saved to S3
+2026-03-02 20:39:04,209 [INFO] Summary written to: processed/sensors_20260302T203902_summary.json
+2026-03-02 20:40:04,034 [INFO] Received SNS message type: Notification
+2026-03-02 20:40:04,034 [INFO] Queuing background processing for: raw/sensors_20260302T204002.csv
+2026-03-02 20:40:04,036 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T204002.csv
+2026-03-02 20:40:04,125 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:40:04,205 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:40:04,207 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:40:04,209 [INFO] Channel 'temperature' baseline updated: count=4400, mean=22.0013, std=2.0244
+2026-03-02 20:40:04,209 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:40:04,214 [INFO] Channel 'humidity' baseline updated: count=4400, mean=55.0868, std=6.0198
+2026-03-02 20:40:04,214 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:40:04,219 [INFO] Channel 'pressure' baseline updated: count=4400, mean=1012.9536, std=3.9268
+2026-03-02 20:40:04,219 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:40:04,224 [INFO] Channel 'wind_speed' baseline updated: count=4400, mean=9.9533, std=3.1862
+2026-03-02 20:40:04,224 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:40:04,232 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:40:04,279 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:40:04,307 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:40:04,315 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:40:04,482 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:40:04,487 [INFO] Detection complete: 6/100 anomalies flagged
+2026-03-02 20:40:04,524 [INFO] Scored file written to: processed/sensors_20260302T204002.csv
+2026-03-02 20:40:04,524 [INFO] Saving updated baseline to S3
+2026-03-02 20:40:04,559 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:40:04,559 [INFO] Baseline saved to S3
+2026-03-02 20:40:04,591 [INFO] Summary written to: processed/sensors_20260302T204002_summary.json
+2026-03-02 20:41:04,503 [INFO] Received SNS message type: Notification
+2026-03-02 20:41:04,503 [INFO] Queuing background processing for: raw/sensors_20260302T204103.csv
+2026-03-02 20:41:04,513 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T204103.csv
+2026-03-02 20:41:04,594 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:41:04,674 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:41:04,674 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:41:04,675 [INFO] Channel 'temperature' baseline updated: count=4500, mean=22.0029, std=2.0172
+2026-03-02 20:41:04,676 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:41:04,676 [INFO] Channel 'humidity' baseline updated: count=4500, mean=55.0871, std=6.0538
+2026-03-02 20:41:04,676 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:41:04,677 [INFO] Channel 'pressure' baseline updated: count=4500, mean=1012.9538, std=3.9184
+2026-03-02 20:41:04,677 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:41:04,678 [INFO] Channel 'wind_speed' baseline updated: count=4500, mean=9.9559, std=3.1809
+2026-03-02 20:41:04,678 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:41:04,680 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:41:04,681 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:41:04,682 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:41:04,683 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:41:04,846 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:41:04,849 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 20:41:04,894 [INFO] Scored file written to: processed/sensors_20260302T204103.csv
+2026-03-02 20:41:04,894 [INFO] Saving updated baseline to S3
+2026-03-02 20:41:04,928 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:41:04,929 [INFO] Baseline saved to S3
+2026-03-02 20:41:04,956 [INFO] Summary written to: processed/sensors_20260302T204103_summary.json
+2026-03-02 20:42:04,073 [INFO] Received SNS message type: Notification
+2026-03-02 20:42:04,074 [INFO] Queuing background processing for: raw/sensors_20260302T204203.csv
+2026-03-02 20:42:04,075 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T204203.csv
+2026-03-02 20:42:04,161 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:42:04,245 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:42:04,245 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:42:04,249 [INFO] Channel 'temperature' baseline updated: count=4600, mean=22.0026, std=2.0073
+2026-03-02 20:42:04,249 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:42:04,253 [INFO] Channel 'humidity' baseline updated: count=4600, mean=55.0917, std=6.081
+2026-03-02 20:42:04,254 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:42:04,258 [INFO] Channel 'pressure' baseline updated: count=4600, mean=1012.9488, std=3.9435
+2026-03-02 20:42:04,258 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:42:04,262 [INFO] Channel 'wind_speed' baseline updated: count=4600, mean=9.9528, std=3.1648
+2026-03-02 20:42:04,262 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:42:04,267 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:42:04,270 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:42:04,272 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:42:04,274 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:42:04,432 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:42:04,436 [INFO] Detection complete: 6/100 anomalies flagged
+2026-03-02 20:42:04,472 [INFO] Scored file written to: processed/sensors_20260302T204203.csv
+2026-03-02 20:42:04,472 [INFO] Saving updated baseline to S3
+2026-03-02 20:42:04,502 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:42:04,503 [INFO] Baseline saved to S3
+2026-03-02 20:42:04,598 [INFO] Summary written to: processed/sensors_20260302T204203_summary.json
+2026-03-02 20:43:04,567 [INFO] Received SNS message type: Notification
+2026-03-02 20:43:04,567 [INFO] Queuing background processing for: raw/sensors_20260302T204303.csv
+2026-03-02 20:43:04,572 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T204303.csv
+2026-03-02 20:43:04,649 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:43:04,759 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:43:04,759 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:43:04,763 [INFO] Channel 'temperature' baseline updated: count=4700, mean=22.0042, std=1.9989
+2026-03-02 20:43:04,763 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:43:04,767 [INFO] Channel 'humidity' baseline updated: count=4700, mean=55.0872, std=6.103
+2026-03-02 20:43:04,768 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:43:04,772 [INFO] Channel 'pressure' baseline updated: count=4700, mean=1012.9561, std=3.9395
+2026-03-02 20:43:04,772 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:43:04,776 [INFO] Channel 'wind_speed' baseline updated: count=4700, mean=9.962, std=3.1718
+2026-03-02 20:43:04,776 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:43:04,781 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:43:04,784 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:43:04,786 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:43:04,789 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:43:04,947 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:43:04,952 [INFO] Detection complete: 6/100 anomalies flagged
+2026-03-02 20:43:04,984 [INFO] Scored file written to: processed/sensors_20260302T204303.csv
+2026-03-02 20:43:04,984 [INFO] Saving updated baseline to S3
+2026-03-02 20:43:05,025 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:43:05,026 [INFO] Baseline saved to S3
+2026-03-02 20:43:05,067 [INFO] Summary written to: processed/sensors_20260302T204303_summary.json
+2026-03-02 20:44:04,986 [INFO] Received SNS message type: Notification
+2026-03-02 20:44:04,986 [INFO] Queuing background processing for: raw/sensors_20260302T204403.csv
+2026-03-02 20:44:04,996 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T204403.csv
+2026-03-02 20:44:05,066 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:44:05,136 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:44:05,137 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:44:05,137 [INFO] Channel 'temperature' baseline updated: count=4800, mean=22.0099, std=1.9936
+2026-03-02 20:44:05,138 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:44:05,138 [INFO] Channel 'humidity' baseline updated: count=4800, mean=55.0969, std=6.1031
+2026-03-02 20:44:05,138 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:44:05,139 [INFO] Channel 'pressure' baseline updated: count=4800, mean=1012.9448, std=3.9602
+2026-03-02 20:44:05,139 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:44:05,139 [INFO] Channel 'wind_speed' baseline updated: count=4800, mean=9.9521, std=3.1704
+2026-03-02 20:44:05,140 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:44:05,141 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:44:05,142 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:44:05,144 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:44:05,145 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:44:05,347 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:44:05,350 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 20:44:05,382 [INFO] Scored file written to: processed/sensors_20260302T204403.csv
+2026-03-02 20:44:05,382 [INFO] Saving updated baseline to S3
+2026-03-02 20:44:05,409 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:44:05,411 [INFO] Baseline saved to S3
+2026-03-02 20:44:05,442 [INFO] Summary written to: processed/sensors_20260302T204403_summary.json
+2026-03-02 20:45:04,683 [INFO] Received SNS message type: Notification
+2026-03-02 20:45:04,683 [INFO] Queuing background processing for: raw/sensors_20260302T204503.csv
+2026-03-02 20:45:04,693 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T204503.csv
+2026-03-02 20:45:04,767 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:45:04,863 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:45:04,864 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:45:04,864 [INFO] Channel 'temperature' baseline updated: count=4900, mean=22.0098, std=2.0175
+2026-03-02 20:45:04,865 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:45:04,865 [INFO] Channel 'humidity' baseline updated: count=4900, mean=55.0964, std=6.0933
+2026-03-02 20:45:04,866 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:45:04,866 [INFO] Channel 'pressure' baseline updated: count=4900, mean=1012.947, std=3.9386
+2026-03-02 20:45:04,866 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:45:04,867 [INFO] Channel 'wind_speed' baseline updated: count=4900, mean=9.9373, std=3.1669
+2026-03-02 20:45:04,867 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:45:04,869 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:45:04,870 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:45:04,871 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:45:04,872 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:45:05,035 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:45:05,039 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 20:45:05,071 [INFO] Scored file written to: processed/sensors_20260302T204503.csv
+2026-03-02 20:45:05,071 [INFO] Saving updated baseline to S3
+2026-03-02 20:45:05,101 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:45:05,101 [INFO] Baseline saved to S3
+2026-03-02 20:45:05,128 [INFO] Summary written to: processed/sensors_20260302T204503_summary.json
+2026-03-02 20:46:05,175 [INFO] Received SNS message type: Notification
+2026-03-02 20:46:05,175 [INFO] Queuing background processing for: raw/sensors_20260302T204603.csv
+2026-03-02 20:46:05,185 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T204603.csv
+2026-03-02 20:46:05,260 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:46:05,336 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:46:05,336 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:46:05,340 [INFO] Channel 'temperature' baseline updated: count=5000, mean=22.004, std=2.0063
+2026-03-02 20:46:05,340 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:46:05,344 [INFO] Channel 'humidity' baseline updated: count=5000, mean=55.1051, std=6.0803
+2026-03-02 20:46:05,344 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:46:05,348 [INFO] Channel 'pressure' baseline updated: count=5000, mean=1012.9569, std=3.9272
+2026-03-02 20:46:05,348 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:46:05,352 [INFO] Channel 'wind_speed' baseline updated: count=5000, mean=9.944, std=3.1917
+2026-03-02 20:46:05,353 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:46:05,357 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:46:05,360 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:46:05,363 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:46:05,364 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:46:05,521 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:46:05,524 [INFO] Detection complete: 6/100 anomalies flagged
+2026-03-02 20:46:05,563 [INFO] Scored file written to: processed/sensors_20260302T204603.csv
+2026-03-02 20:46:05,563 [INFO] Saving updated baseline to S3
+2026-03-02 20:46:05,599 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:46:05,599 [INFO] Baseline saved to S3
+2026-03-02 20:46:05,632 [INFO] Summary written to: processed/sensors_20260302T204603_summary.json
+2026-03-02 20:47:04,809 [INFO] Received SNS message type: Notification
+2026-03-02 20:47:04,809 [INFO] Queuing background processing for: raw/sensors_20260302T204704.csv
+2026-03-02 20:47:04,811 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T204704.csv
+2026-03-02 20:47:04,950 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:47:05,098 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:47:05,099 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:47:05,099 [INFO] Channel 'temperature' baseline updated: count=5100, mean=22.0024, std=2.0017
+2026-03-02 20:47:05,099 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:47:05,100 [INFO] Channel 'humidity' baseline updated: count=5100, mean=55.0766, std=6.097
+2026-03-02 20:47:05,100 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:47:05,101 [INFO] Channel 'pressure' baseline updated: count=5100, mean=1012.9555, std=3.9237
+2026-03-02 20:47:05,101 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:47:05,101 [INFO] Channel 'wind_speed' baseline updated: count=5100, mean=9.9459, std=3.1841
+2026-03-02 20:47:05,101 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:47:05,103 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:47:05,104 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:47:05,106 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:47:05,107 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:47:05,268 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:47:05,272 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 20:47:05,311 [INFO] Scored file written to: processed/sensors_20260302T204704.csv
+2026-03-02 20:47:05,312 [INFO] Saving updated baseline to S3
+2026-03-02 20:47:05,344 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:47:05,344 [INFO] Baseline saved to S3
+2026-03-02 20:47:05,380 [INFO] Summary written to: processed/sensors_20260302T204704_summary.json
+2026-03-02 20:48:05,325 [INFO] Received SNS message type: Notification
+2026-03-02 20:48:05,325 [INFO] Queuing background processing for: raw/sensors_20260302T204804.csv
+2026-03-02 20:48:05,336 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T204804.csv
+2026-03-02 20:48:05,410 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:48:05,517 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:48:05,517 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:48:05,521 [INFO] Channel 'temperature' baseline updated: count=5200, mean=22.0009, std=2.0086
+2026-03-02 20:48:05,521 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:48:05,525 [INFO] Channel 'humidity' baseline updated: count=5200, mean=55.0712, std=6.0749
+2026-03-02 20:48:05,525 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:48:05,529 [INFO] Channel 'pressure' baseline updated: count=5200, mean=1012.9555, std=3.9403
+2026-03-02 20:48:05,530 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:48:05,530 [INFO] Channel 'wind_speed' baseline updated: count=5200, mean=9.9526, std=3.1834
+2026-03-02 20:48:05,530 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:48:05,532 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:48:05,533 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:48:05,534 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:48:05,536 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:48:05,695 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:48:05,698 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 20:48:05,730 [INFO] Scored file written to: processed/sensors_20260302T204804.csv
+2026-03-02 20:48:05,730 [INFO] Saving updated baseline to S3
+2026-03-02 20:48:05,761 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:48:05,763 [INFO] Baseline saved to S3
+2026-03-02 20:48:05,792 [INFO] Summary written to: processed/sensors_20260302T204804_summary.json
+2026-03-02 20:49:05,743 [INFO] Received SNS message type: Notification
+2026-03-02 20:49:05,743 [INFO] Queuing background processing for: raw/sensors_20260302T204904.csv
+2026-03-02 20:49:05,753 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T204904.csv
+2026-03-02 20:49:05,832 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:49:05,930 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:49:05,930 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:49:05,934 [INFO] Channel 'temperature' baseline updated: count=5300, mean=22.002, std=2.0
+2026-03-02 20:49:05,934 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:49:05,938 [INFO] Channel 'humidity' baseline updated: count=5300, mean=55.0711, std=6.0535
+2026-03-02 20:49:05,938 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:49:05,942 [INFO] Channel 'pressure' baseline updated: count=5300, mean=1012.9514, std=3.9424
+2026-03-02 20:49:05,942 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:49:05,946 [INFO] Channel 'wind_speed' baseline updated: count=5300, mean=9.9398, std=3.2202
+2026-03-02 20:49:05,946 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:49:05,951 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:49:05,954 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:49:05,956 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:49:05,959 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:49:06,121 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:49:06,126 [INFO] Detection complete: 6/100 anomalies flagged
+2026-03-02 20:49:06,159 [INFO] Scored file written to: processed/sensors_20260302T204904.csv
+2026-03-02 20:49:06,160 [INFO] Saving updated baseline to S3
+2026-03-02 20:49:06,194 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:49:06,194 [INFO] Baseline saved to S3
+2026-03-02 20:49:06,230 [INFO] Summary written to: processed/sensors_20260302T204904_summary.json
+2026-03-02 20:50:05,384 [INFO] Received SNS message type: Notification
+2026-03-02 20:50:05,384 [INFO] Queuing background processing for: raw/sensors_20260302T205004.csv
+2026-03-02 20:50:05,394 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T205004.csv
+2026-03-02 20:50:05,481 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:50:05,551 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:50:05,551 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:50:05,555 [INFO] Channel 'temperature' baseline updated: count=5400, mean=22.0077, std=1.9953
+2026-03-02 20:50:05,555 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:50:05,559 [INFO] Channel 'humidity' baseline updated: count=5400, mean=55.0678, std=6.0748
+2026-03-02 20:50:05,559 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:50:05,563 [INFO] Channel 'pressure' baseline updated: count=5400, mean=1012.9424, std=3.9391
+2026-03-02 20:50:05,563 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:50:05,567 [INFO] Channel 'wind_speed' baseline updated: count=5400, mean=9.949, std=3.2073
+2026-03-02 20:50:05,567 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:50:05,572 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:50:05,575 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:50:05,577 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:50:05,580 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:50:05,737 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:50:05,741 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 20:50:05,781 [INFO] Scored file written to: processed/sensors_20260302T205004.csv
+2026-03-02 20:50:05,781 [INFO] Saving updated baseline to S3
+2026-03-02 20:50:05,818 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:50:05,818 [INFO] Baseline saved to S3
+2026-03-02 20:50:05,855 [INFO] Summary written to: processed/sensors_20260302T205004_summary.json
+2026-03-02 20:51:05,910 [INFO] Received SNS message type: Notification
+2026-03-02 20:51:05,910 [INFO] Queuing background processing for: raw/sensors_20260302T205104.csv
+2026-03-02 20:51:05,920 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T205104.csv
+2026-03-02 20:51:06,008 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:51:06,088 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:51:06,088 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:51:06,090 [INFO] Channel 'temperature' baseline updated: count=5500, mean=22.0032, std=1.9903
+2026-03-02 20:51:06,090 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:51:06,091 [INFO] Channel 'humidity' baseline updated: count=5500, mean=55.0613, std=6.0605
+2026-03-02 20:51:06,091 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:51:06,091 [INFO] Channel 'pressure' baseline updated: count=5500, mean=1012.9502, std=3.9623
+2026-03-02 20:51:06,091 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:51:06,093 [INFO] Channel 'wind_speed' baseline updated: count=5500, mean=9.9549, std=3.2026
+2026-03-02 20:51:06,093 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:51:06,095 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:51:06,097 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:51:06,098 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:51:06,100 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:51:06,262 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:51:06,265 [INFO] Detection complete: 6/100 anomalies flagged
+2026-03-02 20:51:06,297 [INFO] Scored file written to: processed/sensors_20260302T205104.csv
+2026-03-02 20:51:06,297 [INFO] Saving updated baseline to S3
+2026-03-02 20:51:06,330 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:51:06,332 [INFO] Baseline saved to S3
+2026-03-02 20:51:06,363 [INFO] Summary written to: processed/sensors_20260302T205104_summary.json
+2026-03-02 20:52:06,390 [INFO] Received SNS message type: Notification
+2026-03-02 20:52:06,390 [INFO] Queuing background processing for: raw/sensors_20260302T205205.csv
+2026-03-02 20:52:06,393 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T205205.csv
+2026-03-02 20:52:06,471 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:52:06,547 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:52:06,547 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:52:06,551 [INFO] Channel 'temperature' baseline updated: count=5600, mean=22.0033, std=1.9939
+2026-03-02 20:52:06,551 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:52:06,555 [INFO] Channel 'humidity' baseline updated: count=5600, mean=55.077, std=6.0564
+2026-03-02 20:52:06,555 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:52:06,559 [INFO] Channel 'pressure' baseline updated: count=5600, mean=1012.9492, std=3.9491
+2026-03-02 20:52:06,559 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:52:06,563 [INFO] Channel 'wind_speed' baseline updated: count=5600, mean=9.9553, std=3.2047
+2026-03-02 20:52:06,563 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:52:06,569 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:52:06,572 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:52:06,574 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:52:06,577 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:52:06,735 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:52:06,739 [INFO] Detection complete: 6/100 anomalies flagged
+2026-03-02 20:52:06,773 [INFO] Scored file written to: processed/sensors_20260302T205205.csv
+2026-03-02 20:52:06,773 [INFO] Saving updated baseline to S3
+2026-03-02 20:52:06,807 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:52:06,807 [INFO] Baseline saved to S3
+2026-03-02 20:52:06,839 [INFO] Summary written to: processed/sensors_20260302T205205_summary.json
+2026-03-02 20:53:06,127 [INFO] Received SNS message type: Notification
+2026-03-02 20:53:06,127 [INFO] Queuing background processing for: raw/sensors_20260302T205305.csv
+2026-03-02 20:53:06,137 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T205305.csv
+2026-03-02 20:53:06,214 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:53:06,286 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:53:06,286 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:53:06,290 [INFO] Channel 'temperature' baseline updated: count=5700, mean=22.0026, std=1.9885
+2026-03-02 20:53:06,290 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:53:06,294 [INFO] Channel 'humidity' baseline updated: count=5700, mean=55.1001, std=6.1758
+2026-03-02 20:53:06,294 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:53:06,298 [INFO] Channel 'pressure' baseline updated: count=5700, mean=1012.9459, std=3.9357
+2026-03-02 20:53:06,298 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:53:06,302 [INFO] Channel 'wind_speed' baseline updated: count=5700, mean=9.9605, std=3.2237
+2026-03-02 20:53:06,302 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:53:06,307 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:53:06,309 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:53:06,312 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:53:06,314 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:53:06,472 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:53:06,476 [INFO] Detection complete: 7/100 anomalies flagged
+2026-03-02 20:53:06,552 [INFO] Scored file written to: processed/sensors_20260302T205305.csv
+2026-03-02 20:53:06,552 [INFO] Saving updated baseline to S3
+2026-03-02 20:53:06,585 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:53:06,586 [INFO] Baseline saved to S3
+2026-03-02 20:53:06,638 [INFO] Summary written to: processed/sensors_20260302T205305_summary.json
+2026-03-02 20:54:06,483 [INFO] Received SNS message type: Notification
+2026-03-02 20:54:06,483 [INFO] Queuing background processing for: raw/sensors_20260302T205405.csv
+2026-03-02 20:54:06,493 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T205405.csv
+2026-03-02 20:54:06,574 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:54:06,652 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:54:06,652 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:54:06,656 [INFO] Channel 'temperature' baseline updated: count=5800, mean=22.0085, std=1.9904
+2026-03-02 20:54:06,656 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:54:06,660 [INFO] Channel 'humidity' baseline updated: count=5800, mean=55.0931, std=6.1595
+2026-03-02 20:54:06,660 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:54:06,664 [INFO] Channel 'pressure' baseline updated: count=5800, mean=1012.9528, std=3.9221
+2026-03-02 20:54:06,664 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:54:06,668 [INFO] Channel 'wind_speed' baseline updated: count=5800, mean=9.9583, std=3.2203
+2026-03-02 20:54:06,668 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:54:06,673 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:54:06,676 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:54:06,678 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:54:06,681 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:54:06,839 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:54:06,844 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 20:54:06,877 [INFO] Scored file written to: processed/sensors_20260302T205405.csv
+2026-03-02 20:54:06,877 [INFO] Saving updated baseline to S3
+2026-03-02 20:54:06,909 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:54:06,910 [INFO] Baseline saved to S3
+2026-03-02 20:54:06,946 [INFO] Summary written to: processed/sensors_20260302T205405_summary.json
+2026-03-02 20:55:06,881 [INFO] Received SNS message type: Notification
+2026-03-02 20:55:06,881 [INFO] Queuing background processing for: raw/sensors_20260302T205505.csv
+2026-03-02 20:55:06,883 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T205505.csv
+2026-03-02 20:55:06,964 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:55:07,088 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:55:07,088 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:55:07,092 [INFO] Channel 'temperature' baseline updated: count=5900, mean=22.0043, std=1.9863
+2026-03-02 20:55:07,092 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:55:07,096 [INFO] Channel 'humidity' baseline updated: count=5900, mean=55.0932, std=6.137
+2026-03-02 20:55:07,096 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:55:07,100 [INFO] Channel 'pressure' baseline updated: count=5900, mean=1012.9742, std=3.9894
+2026-03-02 20:55:07,100 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:55:07,104 [INFO] Channel 'wind_speed' baseline updated: count=5900, mean=9.9595, std=3.2122
+2026-03-02 20:55:07,105 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:55:07,109 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:55:07,112 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:55:07,115 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:55:07,116 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:55:07,274 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:55:07,277 [INFO] Detection complete: 6/100 anomalies flagged
+2026-03-02 20:55:07,310 [INFO] Scored file written to: processed/sensors_20260302T205505.csv
+2026-03-02 20:55:07,310 [INFO] Saving updated baseline to S3
+2026-03-02 20:55:07,340 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:55:07,342 [INFO] Baseline saved to S3
+2026-03-02 20:55:07,373 [INFO] Summary written to: processed/sensors_20260302T205505_summary.json
+2026-03-02 20:56:06,408 [INFO] Received SNS message type: Notification
+2026-03-02 20:56:06,408 [INFO] Queuing background processing for: raw/sensors_20260302T205605.csv
+2026-03-02 20:56:06,418 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T205605.csv
+2026-03-02 20:56:06,496 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 20:56:06,627 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:56:06,627 [INFO] Baseline loaded for 5 channels
+2026-03-02 20:56:06,630 [INFO] Channel 'temperature' baseline updated: count=6000, mean=22.0029, std=1.9884
+2026-03-02 20:56:06,631 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 20:56:06,635 [INFO] Channel 'humidity' baseline updated: count=6000, mean=55.084, std=6.1317
+2026-03-02 20:56:06,635 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 20:56:06,639 [INFO] Channel 'pressure' baseline updated: count=6000, mean=1012.9742, std=3.9719
+2026-03-02 20:56:06,639 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 20:56:06,643 [INFO] Channel 'wind_speed' baseline updated: count=6000, mean=9.9677, std=3.2185
+2026-03-02 20:56:06,643 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 20:56:06,648 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 20:56:06,651 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 20:56:06,653 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 20:56:06,656 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 20:56:06,814 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 20:56:06,819 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 20:56:06,853 [INFO] Scored file written to: processed/sensors_20260302T205605.csv
+2026-03-02 20:56:06,853 [INFO] Saving updated baseline to S3
+2026-03-02 20:56:06,889 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 20:56:06,889 [INFO] Baseline saved to S3
+2026-03-02 20:56:06,948 [INFO] Summary written to: processed/sensors_20260302T205605_summary.json
+2026-03-02 21:06:29,285 [INFO] Received SNS message type: Notification
+2026-03-02 21:06:29,286 [INFO] Queuing background processing for: raw/sensors_20260302T210628.csv
+2026-03-02 21:06:29,288 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T210628.csv
+2026-03-02 21:06:29,368 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 21:06:29,439 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 21:06:29,439 [INFO] Baseline loaded for 5 channels
+2026-03-02 21:06:29,443 [INFO] Channel 'temperature' baseline updated: count=6100, mean=21.9995, std=1.9878
+2026-03-02 21:06:29,443 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 21:06:29,447 [INFO] Channel 'humidity' baseline updated: count=6100, mean=55.078, std=6.1561
+2026-03-02 21:06:29,447 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 21:06:29,451 [INFO] Channel 'pressure' baseline updated: count=6100, mean=1012.9688, std=3.9713
+2026-03-02 21:06:29,451 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 21:06:29,455 [INFO] Channel 'wind_speed' baseline updated: count=6100, mean=9.9641, std=3.2106
+2026-03-02 21:06:29,456 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 21:06:29,460 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 21:06:29,463 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 21:06:29,466 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 21:06:29,468 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 21:06:29,627 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 21:06:29,631 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 21:06:29,669 [INFO] Scored file written to: processed/sensors_20260302T210628.csv
+2026-03-02 21:06:29,669 [INFO] Saving updated baseline to S3
+2026-03-02 21:06:29,705 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 21:06:29,706 [INFO] Baseline saved to S3
+2026-03-02 21:06:29,742 [INFO] Summary written to: processed/sensors_20260302T210628_summary.json
+2026-03-02 21:07:29,957 [INFO] Received SNS message type: Notification
+2026-03-02 21:07:29,957 [INFO] Queuing background processing for: raw/sensors_20260302T210728.csv
+2026-03-02 21:07:29,967 [INFO] Processing: s3://ds5220-dp1-xtm9px/raw/sensors_20260302T210728.csv
+2026-03-02 21:07:30,042 [INFO] Loaded 100 rows, columns: ['timestamp', 'temperature', 'humidity', 'pressure', 'wind_speed']
+2026-03-02 21:07:30,116 [INFO] Loaded baseline from s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 21:07:30,116 [INFO] Baseline loaded for 5 channels
+2026-03-02 21:07:30,118 [INFO] Channel 'temperature' baseline updated: count=6200, mean=22.0008, std=1.9824
+2026-03-02 21:07:30,118 [INFO] Baseline updated for channel: temperature with 100 new values
+2026-03-02 21:07:30,119 [INFO] Channel 'humidity' baseline updated: count=6200, mean=55.0588, std=6.1489
+2026-03-02 21:07:30,119 [INFO] Baseline updated for channel: humidity with 100 new values
+2026-03-02 21:07:30,119 [INFO] Channel 'pressure' baseline updated: count=6200, mean=1012.9603, std=3.9641
+2026-03-02 21:07:30,120 [INFO] Baseline updated for channel: pressure with 100 new values
+2026-03-02 21:07:30,120 [INFO] Channel 'wind_speed' baseline updated: count=6200, mean=9.9492, std=3.2249
+2026-03-02 21:07:30,120 [INFO] Baseline updated for channel: wind_speed with 100 new values
+2026-03-02 21:07:30,122 [INFO] Z-score flags computed for channel: temperature
+2026-03-02 21:07:30,123 [INFO] Z-score flags computed for channel: humidity
+2026-03-02 21:07:30,124 [INFO] Z-score flags computed for channel: pressure
+2026-03-02 21:07:30,126 [INFO] Z-score flags computed for channel: wind_speed
+2026-03-02 21:07:30,288 [INFO] IsolationForest fit and scored 100 rows across 4 channels
+2026-03-02 21:07:30,292 [INFO] Detection complete: 5/100 anomalies flagged
+2026-03-02 21:07:30,327 [INFO] Scored file written to: processed/sensors_20260302T210728.csv
+2026-03-02 21:07:30,328 [INFO] Saving updated baseline to S3
+2026-03-02 21:07:30,361 [INFO] Baseline saved to s3://ds5220-dp1-xtm9px/state/baseline.json
+2026-03-02 21:07:30,362 [INFO] Baseline saved to S3
+2026-03-02 21:07:30,396 [INFO] Summary written to: processed/sensors_20260302T210728_summary.json
